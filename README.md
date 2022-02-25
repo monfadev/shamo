@@ -2,9 +2,6 @@
 
 > FLUTTER - Shoes Store App
 
-
-<img src="https://i.ibb.co/SrpcDtp/Cover.png" alt="Cover" border="0"></a>
-
 ## Features
 
 - Http Networking
