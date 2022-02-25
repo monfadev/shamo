@@ -1,16 +1,27 @@
-# shamo
+# Shamo App
 
-A new Flutter project.
+> FLUTTER - Shoes Store App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<img src="https://i.ibb.co/SrpcDtp/Cover.png" alt="Cover" border="0"></a>
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Http Networking
+- Chat using Firebase Firestore
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installing
+
+- git clone 
+- flutter pub get
+- flutter run
+
+## Setup Firebase
+
+- https://firebase.flutter.dev/docs/overview
+
+## Credit
+
+monfauzi – [@monfadev](https://instagram.com/monfadev) – mfaauzii@gmail.com
+
+[https://github.com/monfauzi](https://github.com/monfauzi/)
