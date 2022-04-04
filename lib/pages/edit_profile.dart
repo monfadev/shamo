@@ -10,7 +10,7 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
-    UserModel user = authProvider.user;
+    UserModel? user = authProvider.user;
 
     PreferredSizeWidget header() {
       return AppBar(
@@ -52,7 +52,7 @@ class EditProfilePage extends StatelessWidget {
             ),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "${user.name}",
+                hintText: "${user?.name}",
                 hintStyle: primaryTextStyle,
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
@@ -83,7 +83,7 @@ class EditProfilePage extends StatelessWidget {
             ),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "@${user.username}",
+                hintText: "@${user?.username}",
                 hintStyle: primaryTextStyle,
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
@@ -114,7 +114,7 @@ class EditProfilePage extends StatelessWidget {
             ),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "${user.email}",
+                hintText: "${user?.email}",
                 hintStyle: primaryTextStyle,
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
@@ -149,7 +149,7 @@ class EditProfilePage extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: NetworkImage(
-                    user.profilePhotoUrl!,
+                    user!.profilePhotoUrl!,
                   ),
                 ),
               ),

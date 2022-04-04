@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
-    UserModel user = authProvider.user;
+    UserModel? user = authProvider.user;
     ProductProvider productProvider = Provider.of<ProductProvider>(context);
 
     Widget header() {
@@ -30,14 +30,14 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hello, ${user.name}',
+                    'Hello, ${user?.name}',
                     style: primaryTextStyle.copyWith(
                       fontSize: 24,
                       fontWeight: semiBold,
                     ),
                   ),
                   Text(
-                    "@${user.username}",
+                    "@${user?.username}",
                     style: subtitleTextStyle.copyWith(
                       fontSize: 16,
                     ),
@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: NetworkImage(
-                    user.profilePhotoUrl!,
+                    user?.profilePhotoUrl ?? "",
                   ),
                 ),
               ),
@@ -255,14 +255,7 @@ class HomePage extends StatelessWidget {
     }
 
     return ListView(
-      children: [
-        header(),
-        categories(),
-        popularProductsTitle(),
-        popularProducts(),
-        newArrivalsTitle(),
-        newArrivals()
-      ],
+      children: [header(), categories(), popularProductsTitle(), popularProducts(), newArrivalsTitle(), newArrivals()],
     );
   }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "318770745302",
+    "project_id": "shamo-cfd0a",
+    "storage_bucket": "shamo-cfd0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318770745302:android:e4b77d1a9204147b3c1e77",
+        "android_client_info": {
+          "package_name": "com.monfadev.shamo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318770745302-mj30v7h8a3jjd7m42u1sop9soto8739e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJoBMucRJW9pZHzT-TewiBoEeKeMrxGOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318770745302-mj30v7h8a3jjd7m42u1sop9soto8739e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

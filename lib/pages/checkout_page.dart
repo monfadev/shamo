@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shamo/pages/widgets/checkout_card.dart';
 import 'package:shamo/pages/widgets/loading_button.dart';
-import 'package:shamo/providers/auth_provider.dart';
 import 'package:shamo/providers/cart_provider.dart';
 import 'package:shamo/providers/transaction_provider.dart';
 import 'package:shamo/theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CheckoutPage extends StatefulWidget {
   const CheckoutPage({Key? key}) : super(key: key);
@@ -21,13 +21,14 @@ class _CheckoutPageState extends State<CheckoutPage> {
   Widget build(BuildContext context) {
     CartProvider cartProvider = Provider.of<CartProvider>(context);
     TransactionProvider transactionProvider = Provider.of<TransactionProvider>(context);
-    AuthProvider authProvider = Provider.of<AuthProvider>(context);
 
     handleCheckout() async {
       setState(() {
         isLoading = true;
       });
-      if (await transactionProvider.checkout(authProvider.user.token!, cartProvider.cart, cartProvider.totalPrice())) {
+      final prefs = await SharedPreferences.getInstance();
+
+      if (await transactionProvider.checkout(prefs.getString('token')!, cartProvider.cart, cartProvider.totalPrice())) {
         cartProvider.cart = [];
         Navigator.pushNamedAndRemoveUntil(context, '/checkout-success', (route) => false);
       }
