@@ -11,19 +11,19 @@ class CartModel {
     required this.quantity,
   });
 
-  CartModel.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    product = ProductModel.fromJson(json['product']);
-    quantity = json['quantity'];
-  }
+  // CartModel.fromJson(Map<String, dynamic> json) {
+  //   id = json['id'];
+  //   product = ProductModel.fromJson(json['product']);
+  //   quantity = json['quantity'];
+  // }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'product': product.toJson(),
-      'quantity': quantity,
-    };
-  }
+  // Map<String, dynamic> toJson() {
+  //   return {
+  //     'id': id,
+  //     'product': product.toJson(),
+  //     'quantity': quantity,
+  //   };
+  // }
 
   double getTotalPrice() {
     return product.price! * quantity;

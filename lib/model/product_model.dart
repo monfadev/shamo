@@ -1,5 +1,3 @@
-import 'package:shamo/model/category_model.dart';
-import 'package:shamo/model/gallery_model.dart';
 
 class ProductModel {
   int? id;
@@ -51,3 +49,35 @@ class ProductModel {
 }
 
 class UnitializedProductModel extends ProductModel {}
+
+class CategoryModel {
+  int? id;
+  String? name;
+
+  CategoryModel({required this.id, required this.name});
+
+  CategoryModel.fromJson(Map<String, dynamic> json) {
+    id = json["id"];
+    name = json["name"];
+  }
+
+  Map<String, dynamic> toJson() {
+    return {'id': id, 'name': name};
+  }
+}
+
+class GalleryModel {
+  int? id;
+  String? url;
+
+  GalleryModel({required this.id, required this.url});
+
+  GalleryModel.fromJson(Map<String, dynamic> json) {
+    id = json["id"];
+    url = json["url"];
+  }
+
+  Map<String, dynamic> toJson() {
+    return {'id': id, 'url': url};
+  }
+}
